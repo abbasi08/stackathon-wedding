@@ -1,21 +1,95 @@
 body {
   font-family: sans-serif;
 }
-
 a {
   text-decoration: none;
 }
-
 label {
   display: block;
 }
-
 nav a {
   display: inline-block;
   margin: 1em;
 }
-
 form div {
   margin: 1em;
   display: inline-block;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0px;
+}
+
+img .hearts {
+  margin-left: 0px;
+}
+
+/* PREWEDDING ALBUM */
+#bannerImage {
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-image: url(https://i.ibb.co/TYMSj2C/adventure-Banner.png);
+  background-position: center top;
+  margin-bottom: 1rem;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.LDpic {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+img.LDpic {
+  height: 40vh;
+  flex-grow: 1;
+}
+
+/* Wedding Album */
+.containerWedding {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.weddingPic {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+img.weddingPic {
+  height: 40vh;
+  flex-grow: 1;
+}
+
+/* EVENTS */
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  padding: 0rem;
+}
+h2 {
+  padding: 0rem;
+}
+.eventDetail {
+  font-family: Garamond;
+}
+
+.date {
+  font-family: "Copperplate";
 }

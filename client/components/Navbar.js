@@ -1,47 +1,51 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
-import {logout} from '../store'
+import React from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+import { logout } from "../store";
 
-const Navbar = ({handleClick, isLoggedIn}) => (
+const Navbar = ({ handleClick, isLoggedIn }) => (
   <div>
-    <h1>FS-App-Template</h1>
     <nav>
       {isLoggedIn ? (
         <div>
           {/* The navbar will show these links after you log in */}
-          <Link to="/home">Home</Link>
+          <Link to="/home">Dashboard</Link>
           <a href="#" onClick={handleClick}>
             Logout
           </a>
+          <Link to="/">
+            <img src=" https://image.shutterstock.com/image-vector/handdrawn-heart-icon-set-three-260nw-1305687037.jpg" width="45" height="50" />
+          </Link>
         </div>
       ) : (
-        <div>
+        <div className="navbar">
           {/* The navbar will show these links before you log in */}
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
+          {/* <Link to="/login">Login</Link> */}
+          <Link to="/">
+            <img id="hearts" src=" https://image.shutterstock.com/image-vector/handdrawn-heart-icon-set-three-260nw-1305687037.jpg" width="45" height="50" />
+          </Link>
         </div>
       )}
     </nav>
-    <hr />
+    {/* <hr /> */}
   </div>
-)
+);
 
 /**
  * CONTAINER
  */
-const mapState = state => {
+const mapState = (state) => {
   return {
     isLoggedIn: !!state.auth.id
-  }
-}
+  };
+};
 
-const mapDispatch = dispatch => {
+const mapDispatch = (dispatch) => {
   return {
     handleClick() {
-      dispatch(logout())
+      dispatch(logout());
     }
-  }
-}
+  };
+};
 
-export default connect(mapState, mapDispatch)(Navbar)
+export default connect(mapState, mapDispatch)(Navbar);
